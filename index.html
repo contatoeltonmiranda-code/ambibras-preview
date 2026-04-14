@@ -332,6 +332,9 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;line-height:1.1;letter-spacin
 .fleet-item:hover::after{width:100%}
 .fleet-item:hover{border-color:transparent;box-shadow:var(--shadow-lg);transform:translateY(-4px)}
 .fleet-item svg{width:40px;height:40px;stroke:var(--navy);fill:none;stroke-width:1.5;margin:0 auto 16px}
+.fleet-item-photo{padding:24px 20px 28px}
+.fleet-photo{width:100%;height:200px;margin:0 auto 18px;display:flex;align-items:center;justify-content:center;background:var(--white);border-radius:12px;overflow:hidden}
+.fleet-photo img{max-width:100%;max-height:100%;object-fit:contain}
 .fleet-item h4{font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:600;color:var(--navy);margin-bottom:6px}
 .fleet-item p{font-size:13px;color:var(--text-sub);line-height:1.6}
 
@@ -413,6 +416,11 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;line-height:1.1;letter-spacin
 .cert-badge{width:52px;height:52px;border-radius:50%;background:var(--surface);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;color:var(--navy)}
 .cert h4{font-size:13px;font-weight:700;color:var(--navy);margin-bottom:4px}
 .cert p{font-size:12px;color:var(--muted);line-height:1.5}
+.certs-logos .cert{padding:32px 20px}
+.cert-logo{width:90px;height:90px;margin:0 auto 14px;display:flex;align-items:center;justify-content:center}
+.cert-logo img{max-width:100%;max-height:100%;object-fit:contain;filter:grayscale(100%) contrast(.9);opacity:.85;transition:all .4s var(--ease)}
+.cert:hover .cert-logo img{filter:none;opacity:1}
+.certs-logos .cert h4{font-size:14px;margin-top:4px}
 
 /* Sectors */
 .sectors-wrap{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
@@ -591,7 +599,7 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;line-height:1.1;letter-spacin
           </div>
         </div>
         <div class="bento-card b2" data-r="scale" data-d="1" onclick="nav('coleta')">
-          <img src="fotos/caminhao-ambibras-2.png" alt="Coleta e Transporte">
+          <img src="fotos/site-coleta-transporte-residuos.png" alt="Coleta e Transporte">
           <div class="bento-card-overlay">
             <h3>Coleta e Transporte de Resíduos</h3>
             <p>Frota própria com caminhão vácuo e sewer-jet. Rastreabilidade completa.</p>
@@ -606,13 +614,16 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;line-height:1.1;letter-spacin
             <span class="arrow">Saiba mais &rarr;</span>
           </div>
         </div>
-        <div class="b4 b4-solid" data-r="up" data-d="3">
-          <h3>Espaço confinado e altura</h3>
-          <p>Equipe certificada NR 33 e NR 35 com protocolos rigorosos de entrada, monitoramento e resgate.</p>
-          <a class="bt bt-wa" href="#" style="align-self:flex-start"><span class="wa-icon"></span> Orçamento</a>
+        <div class="bento-card b4" data-r="scale" data-d="3">
+          <img src="fotos/site-servico-espaco-confinado.png" alt="Espaço Confinado e Altura">
+          <div class="bento-card-overlay">
+            <h3>Espaço confinado e altura</h3>
+            <p>Equipe certificada NR 33 e NR 35 com protocolos rigorosos de entrada, monitoramento e resgate.</p>
+            <span class="arrow">Saiba mais &rarr;</span>
+          </div>
         </div>
         <div class="bento-card b5" data-r="scale" data-d="4">
-          <img src="fotos/servico-em-espaco-confinado.jpg" alt="Espaço Confinado">
+          <img src="fotos/site-servicos-especializados.png" alt="Serviços Especializados">
           <div class="bento-card-overlay">
             <h3>Serviços Especializados</h3>
             <p>Monitoramento atmosférico, protocolos de segurança e supervisão técnica dedicada em cada operação.</p>
@@ -626,8 +637,8 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;line-height:1.1;letter-spacin
   <!-- PROBLEM — SPLIT -->
   <section class="split">
     <div class="split-media">
-      <img src="fotos/servico-em-altura.jpeg" alt="Serviço em altura">
-      <span class="caption">Operacao em altura — NR 35</span>
+      <img src="fotos/site-problema-solucao.jpeg" alt="O problema">
+      <span class="caption">Limpeza técnica industrial</span>
     </div>
     <div class="split-body" data-r="right">
       <div class="tag">O Problema</div>
@@ -765,11 +776,11 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;line-height:1.1;letter-spacin
 
   <section style="padding:0;background:var(--white)"><div class="wrap"><div class="about-split"><div data-r="left"><p style="color:var(--text-sub);font-size:16px;line-height:1.85">A Ambibras Engenharia é especializada em limpezas técnicas industriais, desobstrução de galerias, coleta e transporte rodoviário de efluentes, resíduos industriais, produtos perigosos e não perigosos.</p><p style="color:var(--text-sub);font-size:16px;line-height:1.85;margin-top:12px">Contamos com os profissionais mais qualificados do mercado e operamos com rígidos padrões de segurança, executando serviços em espaço confinado e altura com total domínio técnico.</p><p style="color:var(--text-sub);font-size:16px;line-height:1.85;margin-top:12px">Nossa atuação abrange os setores mais exigentes da indústria nacional — siderurgia, alimentos e bebidas, concessionárias de saneamento e energia elétrica — onde qualquer falha operacional pode representar riscos graves para pessoas, patrimônio e meio ambiente.</p><p style="color:var(--text-sub);font-size:16px;line-height:1.85;margin-top:12px">Somos certificados e cadastrados nos órgãos reguladores, com Engenheiro Ambiental como Responsável Técnico, garantindo que cada operação esteja em total conformidade com a legislação ambiental e trabalhista.</p></div><div class="about-img" data-r="right"><img src="fotos/limpeza-industrial.jpeg" alt="Equipe Ambibras"></div></div></div></section>
 
-  <section style="padding:0;background:var(--white)"><div class="wrap"><div class="purpose" data-r="up"><div class="bar"></div><h2>Nosso propósito</h2><p>Ajudamos empresas a se tornarem mais sustentáveis e eficientes. Com foco nas demandas de cada cliente, atuamos com transparência absoluta, valorizando a vida e a segurança no trabalho.</p><p style="margin-top:12px;color:rgba(255,255,255,.5);font-size:16px;line-height:1.85">Pautamos todas as nossas atividades na ética, na preservação do meio ambiente e na responsabilidade social.</p><p style="margin-top:12px;color:rgba(255,255,255,.5);font-size:16px;line-height:1.85">Para nós, não existe resultado que justifique comprometer a segurança de um trabalhador ou a saúde do meio ambiente.</p></div></div></section>
+  <section style="padding:0;background:var(--white)"><div class="wrap"><div class="purpose" data-r="up"><div class="bar"></div><h2>Nosso propósito</h2><p>Ajudamos empresas a se tornarem mais sustentáveis e eficientes. Com foco nas demandas de cada cliente, atuamos com transparência absoluta, valorizando a vida e a segurança no trabalho.</p><p style="margin-top:12px;color:rgba(255,255,255,.5);font-size:16px;line-height:1.85">Pautamos todas as nossas atividades na ética, na preservação do meio ambiente e na responsabilidade social.</p><p style="margin-top:12px;color:rgba(255,255,255,.5);font-size:16px;line-height:1.85">Para nós, não existe resultado que justifique comprometer a segurança de um trabalhador ou o meio ambiente.</p></div></div></section>
 
   <section style="padding:80px 0;background:var(--white)"><div class="wrap"><div data-r="up"><div class="tag">Valores</div><h2 style="font-size:clamp(1.6rem,3vw,2.4rem);color:var(--navy)">Os valores que guiam cada operação</h2></div><div class="values-grid"><div class="val-card" data-r="up" data-d="1"><div class="v-ico"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h4>Segurança em Primeiro Lugar</h4><p>Cada profissional treinado e certificado. Técnico de Segurança em campo.</p></div><div class="val-card" data-r="up" data-d="2"><div class="v-ico"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div><h4>Transparência Total</h4><p>Prestação de contas completa. Documentação rastreável. Sem riscos ocultos.</p></div><div class="val-card" data-r="up" data-d="3"><div class="v-ico"><svg viewBox="0 0 24 24"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M8 12l2 2 4-4"/></svg></div><h4>Compromisso Ambiental</h4><p>Preservação do meio ambiente como princípio, não apenas obrigação legal.</p></div><div class="val-card" data-r="up" data-d="4"><div class="v-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4"/></svg></div><h4>Excelência Técnica</h4><p>Métodos refinados ao longo de anos em serviços complexos e de grande escala.</p></div><div class="val-card" data-r="up" data-d="5"><div class="v-ico"><svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><h4>Agilidade</h4><p>Do contato a execução, sem burocracia desnecessaria.</p></div><div class="val-card" data-r="up" data-d="6"><div class="v-ico"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><h4>Ética</h4><p>Atuamos de forma ética e transparente em tudo o que fazemos.</p></div></div></div></section>
 
-  <section style="padding:80px 0;background:var(--surface)"><div class="wrap"><div data-r="up"><div class="tag">Certificações</div><h2 style="font-size:clamp(1.6rem,3vw,2.4rem);color:var(--navy)">Certificações e conformidade regulatória</h2><p style="color:var(--text-sub);font-size:15px;max-width:700px;margin-top:8px">A Ambibras opera em total conformidade com as normas regulamentadoras e a legislação ambiental brasileira. Nossos profissionais possuem treinamento e certificação nas principais NRs exigidas para operações industriais.</p></div><div class="certs"><div class="cert" data-r="up" data-d="1"><div class="cert-badge">NR33</div><h4>Espaço Confinado</h4><p>Tanques, tubulações, galerias e atmosferas perigosas.</p></div><div class="cert" data-r="up" data-d="2"><div class="cert-badge">NR35</div><h4>Trabalho em Altura</h4><p>Serviços acima de 2m com proteção contra quedas.</p></div><div class="cert" data-r="up" data-d="3"><div class="cert-badge">NR10</div><h4>Segurança Elétrica</h4><p>Operações próximas a instalações elétricas.</p></div><div class="cert" data-r="up" data-d="4"><div class="cert-badge">RT</div><h4>Responsável Técnico</h4><p>Engenheiro Ambiental registrado.</p></div></div></div></section>
+  <section style="padding:80px 0;background:var(--surface)"><div class="wrap"><div data-r="up"><div class="tag">Certificações</div><h2 style="font-size:clamp(1.6rem,3vw,2.4rem);color:var(--navy)">Certificações e conformidade regulatória</h2><p style="color:var(--text-sub);font-size:15px;max-width:700px;margin-top:8px">A Ambibras opera em total conformidade com as normas regulamentadoras e a legislação ambiental brasileira.</p></div><div class="certs certs-logos"><div class="cert" data-r="up" data-d="1"><div class="cert-logo"><img src="fotos/crea.png" alt="CREA"></div><h4>CREA</h4></div><div class="cert" data-r="up" data-d="2"><div class="cert-logo"><img src="fotos/ibama.png" alt="IBAMA"></div><h4>IBAMA</h4></div><div class="cert" data-r="up" data-d="3"><div class="cert-logo"><img src="fotos/inea.png" alt="INEA"></div><h4>INEA</h4></div><div class="cert" data-r="up" data-d="4"><div class="cert-logo"><img src="fotos/inmetro.png" alt="INMETRO"></div><h4>INMETRO</h4></div></div></div></section>
 
   <section style="padding:80px 0;background:var(--white)"><div class="wrap">
     <div data-r="up">
@@ -803,7 +814,7 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;line-height:1.1;letter-spacin
       <div>
         <h3>Coleta e Transporte de Resíduos</h3>
         <p>Coleta e transporte de efluentes, resíduos perigosos (Classe I) e não perigosos (Classe II). Frota própria com caminhão vácuo e sewer-jet.</p>
-        <ul><li>Caminhão vácuo para efluentes líquidos</li><li>Unidade combinada sewer-jet</li><li>Rastreabilidade completa (MTR, CADRI)</li><li>Conformidade com legislação ambiental</li></ul>
+        <ul><li>Caminhão vácuo para efluentes líquidos</li><li>Caminhão super vácuo para resíduos sólidos e pastosos</li><li>Bucket Machines para grandes tubulações densamente sedimentadas</li><li>Rastreabilidade completa</li></ul>
       </div>
       <div style="border-radius:12px;overflow:hidden;height:260px"><img src="fotos/caminhao-ambibras-3.png" alt="Coleta e Transporte" style="width:100%;height:100%;object-fit:cover"></div>
     </div>
@@ -880,7 +891,7 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;line-height:1.1;letter-spacin
     </div>
     <div class="split-media">
       <img src="fotos/Limpeza-tecnica-2.jpeg" alt="Limpeza técnica industrial">
-      <span class="caption">Hidrojateamento Industrial</span>
+      <span class="caption">Emergências Ambientais</span>
     </div>
   </section>
 
@@ -908,10 +919,10 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;line-height:1.1;letter-spacin
 
   <section class="detail-section"><div class="wrap">
     <div data-r="up"><h2 style="font-size:clamp(1.6rem,3vw,2.4rem);color:var(--navy);margin-bottom:24px">Serviços de limpeza técnica</h2></div>
-    <div class="detail-card" data-r="up"><h3>Hidrojateamento Industrial</h3><p>Limpeza com jatos de água até 40.000 PSI para remoção de incrustações, resíduos, carepas e revestimentos deteriorados.</p><ul><li>Tubulações e trocadores de calor</li><li>Caldeiras e vasos de pressão</li><li>Superfícies metálicas e estruturas</li><li>Preparo de superfície para pintura</li></ul></div>
-    <div class="detail-card" data-r="up"><h3>Limpeza de Tanques e Vasos</h3><p>Limpeza interna em espaço confinado (NR 33) com monitoramento atmosférico, vigias e plano de resgate.</p><ul><li>Tanques de combustíveis e químicos</li><li>Tanques de processo industrial</li><li>Silos de armazenamento</li><li>Reatores e misturadores</li></ul></div>
+    <div class="detail-card" data-r="up"><h3>Hidrojateamento Industrial</h3><p>Limpeza com jatos de água até 10.000 PSI para remoção de incrustações, resíduos, carepas e revestimentos deteriorados.</p><ul><li>Tubulações externas e internas</li><li>Caldeiras e vasos de pressão</li><li>Superfícies metálicas e estruturas</li><li>Reatores e misturadores</li></ul></div>
+    <div class="detail-card" data-r="up"><h3>Limpeza de Tanques e Reservatórios</h3><p>Limpeza interna em espaço confinado (NR 33) com monitoramento atmosférico, vigias e plano de resgate.</p><ul><li>Tanques de ETE's, ETA's</li><li>Tanques de processo industrial</li><li>Silos de armazenamento</li><li>Tanques de decantação</li></ul></div>
     <div class="detail-card" data-r="up"><h3>Sucção Industrial a Vácuo</h3><p>Remoção de resíduos líquidos, pastosos e sólidos com unidades de alta capacidade.</p><ul><li>Caixas separadoras água/óleo</li><li>Bacias de contenção</li><li>Poços de visita</li><li>Borras e lamas industriais</li></ul></div>
-    <div class="detail-card" data-r="up"><h3>Limpeza de Trocadores de Calor</h3><p>Limpeza mecânica e química para restauração da eficiência térmica.</p><ul><li>Trocadores casco-tubo</li><li>Trocadores de placas</li><li>Condensadores e evaporadores</li><li>Torres de resfriamento</li></ul></div>
+    
   </div></section>
 
   <!-- GALERIA DE OPERACOES -->
@@ -925,6 +936,7 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;line-height:1.1;letter-spacin
       <h2>Equipe certificada. Segurança garantida.</h2>
       <p>Profissionais certificados NR 33 para espaço confinado, NR 35 para trabalho em altura e NR 10 para segurança elétrica.</p>
       <p>Técnico em Segurança do Trabalho presente em campo durante toda a operação. Engenheiro Ambiental como Responsável Técnico.</p>
+      <p>Motoristas habilitados com curso de MOPP (Movimentação Operacional de Produtos Perigosos).</p>
       <p style="color:var(--green-bright);font-weight:600">Não terceirizamos a segurança. Ela é parte do nosso processo.</p>
     </div>
   </section>
@@ -948,10 +960,11 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;line-height:1.1;letter-spacin
     </div>
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px">
       <div class="detail-card" data-r="up" data-d="1"><h3 style="font-size:16px">Siderurgia</h3><p>Limpeza de altos fornos, aciarias, lingotamentos e sistemas de refrigeração.</p></div>
-      <div class="detail-card" data-r="up" data-d="2"><h3 style="font-size:16px">Alimentos e Bebidas</h3><p>Limpeza de tanques de processo, linhas de envase e sistemas CIP.</p></div>
+      <div class="detail-card" data-r="up" data-d="2"><h3 style="font-size:16px">Alimentos e Bebidas</h3><p>Limpeza de tanques de processo, linhas de envase e reservatórios de subprodutos.</p></div>
       <div class="detail-card" data-r="up" data-d="3"><h3 style="font-size:16px">Saneamento</h3><p>Limpeza de estações de tratamento, elevatórias e redes coletoras.</p></div>
-      <div class="detail-card" data-r="up" data-d="4"><h3 style="font-size:16px">Energia</h3><p>Limpeza de caldeiras, trocadores, turbinas e sistemas de refrigeração.</p></div>
-      <div class="detail-card" data-r="up" data-d="5"><h3 style="font-size:16px">Química e Petroquímica</h3><p>Limpeza de reatores, colunas de destilação e sistemas de processo.</p></div>
+      <div class="detail-card" data-r="up" data-d="4"><h3 style="font-size:16px">Energia</h3><p>Limpeza de porões de cabos, subestações de energia e caixas subterrâneas de transformador.</p></div>
+      <div class="detail-card" data-r="up" data-d="5"><h3 style="font-size:16px">Química e Petroquímica</h3><p>Limpeza de reatores, colunas de destilação e emergências ambientais.</p></div>
+      <div class="detail-card" data-r="up" data-d="6"><h3 style="font-size:16px">Construção Civil e Infraestrutura</h3><p>Limpeza de galerias de águas pluviais, caixa separadora de água e óleo e tubulações prediais.</p></div>
     </div>
   </div></section>
 
@@ -976,13 +989,13 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;line-height:1.1;letter-spacin
   <!-- IMAGEM FROTA -->
   <section class="split">
     <div class="split-media">
-      <img src="fotos/frota-ambibras.png" alt="Frota Ambibras">
+      <img src="fotos/site-frota-caminhao-vacall.png" alt="Frota Vacall Ambibras">
       <span class="caption">Frota própria Ambibras</span>
     </div>
     <div class="split-body" data-r="right">
       <div class="tag">O Risco da Gestão Inadequada</div>
       <h2>Resíduos mal geridos podem custar a reputação da sua empresa</h2>
-      <p>A legislação ambiental brasileira é rigorosa — e as penalidades são severas. Empresas que não gerenciam corretamente a coleta, transporte e destinação dos seus resíduos estão sujeitas a multas milionárias, responsabilidade solidária e danos irreparáveis à imagem.</p>
+      <p>A legislação ambiental brasileira é rigorosa — e as penalidades são severas. Empresas que não gerenciam corretamente a coleta, transporte e destinação dos seus resíduos estão sujeitas a multas, responsabilidade solidária e danos irreparáveis à imagem.</p>
     </div>
   </section>
 
@@ -1010,18 +1023,30 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;line-height:1.1;letter-spacin
 
   <section class="detail-section"><div class="wrap">
     <div data-r="up"><h2 style="font-size:clamp(1.6rem,3vw,2.4rem);color:var(--navy);margin-bottom:24px">Soluções de coleta e transporte</h2></div>
-    <div class="detail-card" data-r="up"><h3>Coleta de Efluentes com Caminhão Vácuo</h3><p>Sucção e transporte de efluentes líquidos, lodos, águas residuais e conteúdos de fossas e ETEs.</p><ul><li>Fossas sépticas e caixas de gordura</li><li>Estações de tratamento de efluentes</li><li>Caixas separadoras água/óleo</li><li>Bacias de contenção</li></ul></div>
-    <div class="detail-card" data-r="up"><h3>Desobstrução com Sewer-Jet</h3><p>Hidrojateamento e sucção simultânea para desobstrução de tubulações, redes e galerias.</p><ul><li>Redes de esgoto e galerias pluviais</li><li>Tubulações industriais obstruídas</li><li>Caixas de passagem e poços de visita</li><li>Redes coletoras</li></ul></div>
-    <div class="detail-card" data-r="up"><h3>Transporte de Resíduos Industriais</h3><p>Transporte de resíduos Classe I (perigosos) e Classe II (não perigosos), conforme ABNT NBR 10.004.</p><ul><li>Óleos, solventes, borras, contaminados</li><li>Resíduos orgânicos, lodos</li><li>Embalagens contaminadas</li><li>Produtos químicos vencidos</li></ul></div>
+    <div class="detail-card" data-r="up"><h3>Coleta de Efluentes com Caminhão Vácuo</h3><p>Sucção e transporte de efluentes líquidos, lodos, águas residuais e conteúdos de fossas e ETEs.</p><ul><li>Fossas sépticas e caixas de gordura</li><li>Estações de tratamento de efluentes</li><li>Tanques de lodo biológico</li><li>Bacias de contenção</li></ul></div>
+    <div class="detail-card" data-r="up"><h3>Desobstrução com Sewer-Jet</h3><p>Hidrojateamento e sucção simultânea para desobstrução de tubulações, redes e galerias.</p><ul><li>Redes de esgoto e galerias pluviais</li><li>Tubulações industriais obstruídas</li><li>Caixas de passagem e poços de visita</li><li>Drenos e dutos subterrâneos</li></ul></div>
+    <div class="detail-card" data-r="up"><h3>Transporte de Resíduos Industriais</h3><p>Transporte de resíduos Classe I (perigosos) e Classe II (não perigosos), conforme ABNT NBR 10.004.</p><ul><li>Óleos, solventes, borras, contaminados</li><li>Resíduos orgânicos, lodos</li><li>Caixa separadora de água e óleo</li><li>Terra infusória</li></ul></div>
     <div class="detail-card" data-r="up"><h3>Transporte de Resíduos Sanitários</h3><p>Coleta e transporte de efluentes sanitários residenciais, comerciais e industriais. Atendimento rápido para demandas recorrentes ou emergenciais.</p><ul><li>Condomínios residenciais e comerciais</li><li>Plantas industriais</li><li>Canteiros de obras</li><li>Eventos e instalações temporárias</li></ul></div>
   </div></section>
 
   <section style="padding:80px 0;background:var(--surface)"><div class="wrap">
     <div data-r="up"><h2 style="font-size:clamp(1.6rem,3vw,2.4rem);color:var(--navy);margin-bottom:8px">Frota própria e equipamentos</h2></div>
     <div class="fleet-grid">
-      <div class="fleet-item" data-r="up" data-d="1"><svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg><h4>Caminhão Vácuo</h4><p>Sucção de efluentes líquidos, lodos e resíduos pastosos de alta capacidade.</p></div>
-      <div class="fleet-item" data-r="up" data-d="2"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06"/></svg><h4>Sewer-Jet</h4><p>Combinado de hidrojateamento e sucção para desobstrução.</p></div>
-      <div class="fleet-item" data-r="up" data-d="3"><svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg><h4>Veículos de Transporte</h4><p>Frota adequada para transporte rodoviário de resíduos perigosos e não perigosos, conforme exigências legais e normas de segurança.</p></div>
+      <div class="fleet-item fleet-item-photo" data-r="up" data-d="1">
+        <div class="fleet-photo"><img src="fotos/site-super-vacuo-coletor-po.png" alt="Super vácuo coletor de pó"></div>
+        <h4>Super vácuo coletor de pó</h4>
+        <p>Sucção de cal, cimento, pó de refratário industrial e outros materiais finos.</p>
+      </div>
+      <div class="fleet-item fleet-item-photo" data-r="up" data-d="2">
+        <div class="fleet-photo"><img src="fotos/site-bucket-machine.png" alt="Bucket Machines"></div>
+        <h4>Bucket Machines</h4>
+        <p>Projetadas para a limpeza pesada de redes de esgoto e águas pluviais.</p>
+      </div>
+      <div class="fleet-item fleet-item-photo" data-r="up" data-d="3">
+        <div class="fleet-photo"><img src="fotos/site-super-vacuo.png" alt="Super vácuo"></div>
+        <h4>Super vácuo</h4>
+        <p>Sucção de carepas, cerâmicas de forno refratário, areia e outros materiais sólidos.</p>
+      </div>
     </div>
   </div></section>
 
@@ -1029,9 +1054,9 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;line-height:1.1;letter-spacin
     <div data-r="up"><div class="tag">Rastreabilidade</div><h2 style="font-size:clamp(1.6rem,3vw,2.4rem);color:var(--navy);margin-bottom:8px">Rastreabilidade completa em cada operação</h2><p style="color:var(--text-sub);font-size:15px;max-width:600px">Cada coleta e transporte é documentado com:</p></div>
     <ul class="doc-list" data-r="up">
       <li><div class="doc-icon">MTR</div><div><h4>Manifesto de Transporte de Resíduos</h4><p>Documento que acompanha o resíduo desde a geração até a destinação final, conforme SINIR.</p></div></li>
-      <li><div class="doc-icon">CAD</div><div><h4>CADRI</h4><p>Certificado de Movimentação de Resíduos de Interesse Ambiental, quando aplicável.</p></div></li>
+      
       <li><div class="doc-icon">LIC</div><div><h4>Licenças Ambientais</h4><p>Operação e transporte em conformidade com as licenças vigentes.</p></div></li>
-      <li><div class="doc-icon">CDF</div><div><h4>Certificado de Destinação Final</h4><p>Comprovante de destinação adequada: aterro, coprocessamento ou reciclagem.</p></div></li>
+      <li><div class="doc-icon">CDF</div><div><h4>Certificado de Destinação Final</h4><p>Comprovante de destinação adequada: aterro, coprocessamento ou tratamento de efluentes.</p></div></li>
       <li><div class="doc-icon">REL</div><div><h4>Relatório Técnico</h4><p>Documentação completa com registros, volumes, classificação e destinação para prestação de contas e due diligence.</p></div></li>
     </ul>
     <p style="color:var(--green);font-weight:600;margin-top:24px" data-r="up">Sua empresa recebe toda a documentação para auditorias, fiscalizações e due diligence. Sem lacunas.</p>
