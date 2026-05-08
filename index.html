@@ -116,7 +116,7 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;line-height:1.1;letter-spacin
 .hero{min-height:100vh;position:relative;display:flex;align-items:center;overflow:hidden;background:var(--navy)}
 .hero-media{position:absolute;inset:0;z-index:1}
 .hero-media img{width:100%;height:100%;object-fit:cover;opacity:.50;filter:brightness(.8)}
-.hero-media::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,27,51,.4) 0%,rgba(9,27,51,.2) 40%,rgba(9,27,51,.85) 100%)}
+.hero-media::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,27,51,.4) 0%,rgba(9,27,51,.2) 40%,rgba(9,27,51,.85) 100%);pointer-events:none}
 .hero-grid-overlay{position:absolute;inset:0;z-index:2;opacity:.04;background-image:linear-gradient(rgba(255,255,255,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.5) 1px,transparent 1px);background-size:60px 60px}
 .hero-content{position:relative;z-index:3;width:100%;max-width:1400px;margin:0 auto;padding:200px 40px 100px}
 .hero-overline{display:inline-flex;align-items:center;gap:8px;color:var(--green-bright);font-size:12px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:24px}
@@ -207,7 +207,7 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;line-height:1.1;letter-spacin
    BIG NUMBERS
    ============================================================ */
 .bignum{padding:100px 0;background:var(--navy);position:relative;overflow:hidden}
-.bignum::before{content:'';position:absolute;inset:0;opacity:.03;background-image:linear-gradient(rgba(255,255,255,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.5) 1px,transparent 1px);background-size:80px 80px}
+.bignum::before{content:'';position:absolute;inset:0;opacity:.03;background-image:linear-gradient(rgba(255,255,255,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.5) 1px,transparent 1px);background-size:80px 80px;pointer-events:none}
 .bignum-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;z-index:1}
 .bignum-item{text-align:center;padding:40px 20px;position:relative}
 .bignum-item:not(:last-child)::after{content:'';position:absolute;right:0;top:25%;height:50%;width:1px;background:rgba(255,255,255,.08)}
@@ -245,7 +245,7 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;line-height:1.1;letter-spacin
 .testi-header h2{font-size:clamp(1.8rem,3.5vw,2.6rem);color:var(--navy)}
 .testi-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:24px}
 .testi-big{background:var(--navy);border-radius:20px;padding:48px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;min-height:380px}
-.testi-big::before{content:'\201C';position:absolute;top:20px;right:32px;font-family:'Space Grotesk',serif;font-size:140px;color:rgba(255,255,255,.03);line-height:1}
+.testi-big::before{content:'\201C';position:absolute;top:20px;right:32px;font-family:'Space Grotesk',serif;font-size:140px;color:rgba(255,255,255,.03);line-height:1;pointer-events:none}
 .testi-big p{font-size:18px;color:rgba(255,255,255,.7);line-height:1.8;font-style:italic;position:relative;z-index:1}
 .testi-big cite{font-style:normal;display:block;margin-top:24px;color:#fff;font-weight:600;font-size:14px}
 .testi-big cite span{display:block;color:rgba(255,255,255,.4);font-weight:400;font-size:12px;margin-top:2px}
@@ -254,7 +254,7 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;line-height:1.1;letter-spacin
 .testi-card:hover{border-color:transparent;box-shadow:var(--shadow-lg);transform:translateY(-3px)}
 .testi-card::after{content:'';position:absolute;bottom:0;left:0;width:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--green));transition:width .6s var(--ease)}
 .testi-card:hover::after{width:100%}
-.testi-card::before{content:'\201C';position:absolute;top:8px;right:20px;font-family:'Space Grotesk',serif;font-size:56px;color:var(--border);line-height:1}
+.testi-card::before{content:'\201C';position:absolute;top:8px;right:20px;font-family:'Space Grotesk',serif;font-size:56px;color:var(--border);line-height:1;pointer-events:none}
 .testi-card p{font-size:14.5px;color:var(--text-sub);line-height:1.75;font-style:italic;margin-bottom:14px}
 .testi-card cite{font-style:normal;font-size:13px;font-weight:600;color:var(--navy)}
 .testi-card cite span{font-weight:400;color:var(--muted);display:block;font-size:12px;margin-top:1px}
@@ -278,7 +278,7 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;line-height:1.1;letter-spacin
    CTA BAND
    ============================================================ */
 .cta-band{padding:80px 0;background:var(--navy);text-align:center;position:relative;overflow:hidden}
-.cta-band::before{content:'';position:absolute;inset:0;opacity:.03;background-image:linear-gradient(rgba(255,255,255,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.5) 1px,transparent 1px);background-size:60px 60px}
+.cta-band::before{content:'';position:absolute;inset:0;opacity:.03;background-image:linear-gradient(rgba(255,255,255,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.5) 1px,transparent 1px);background-size:60px 60px;pointer-events:none}
 .cta-band h2{color:#fff;font-size:clamp(1.6rem,3vw,2.4rem);margin-bottom:10px;position:relative;z-index:1}
 .cta-band p{color:rgba(255,255,255,.45);font-size:15px;margin-bottom:28px;max-width:500px;margin-left:auto;margin-right:auto;position:relative;z-index:1}
 .cta-band .bt{position:relative;z-index:1}
@@ -289,8 +289,8 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;line-height:1.1;letter-spacin
    ============================================================ */
 .detail-section{padding:120px 0;background:var(--white)}
 .detail-card{padding:40px;border-radius:20px;background:var(--surface);border:1px solid var(--border);margin-bottom:20px;transition:all .5s var(--ease);position:relative;overflow:hidden}
-.detail-card::before{content:'';position:absolute;bottom:0;left:0;right:0;height:0;background:linear-gradient(135deg,var(--blue),var(--green));opacity:.12;transition:height .5s var(--ease);border-radius:20px;z-index:0}
-.detail-card::after{content:'';position:absolute;bottom:0;left:0;width:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--green));transition:width .6s var(--ease);border-radius:0 0 20px 20px}
+.detail-card::before{content:'';position:absolute;bottom:0;left:0;right:0;height:0;background:linear-gradient(135deg,var(--blue),var(--green));opacity:.12;transition:height .5s var(--ease);border-radius:20px;z-index:0;pointer-events:none}
+.detail-card::after{content:'';position:absolute;bottom:0;left:0;width:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--green));transition:width .6s var(--ease);border-radius:0 0 20px 20px;pointer-events:none}
 .detail-card:hover::before{height:100%}
 .detail-card:hover::after{width:100%}
 .detail-card:hover{border-color:transparent;box-shadow:var(--shadow-lg);transform:translateY(-3px)}
@@ -303,7 +303,7 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;line-height:1.1;letter-spacin
 
 /* Service hero banner reuse */
 .svc-hero{padding:200px 0 80px;background:var(--navy);color:#fff;position:relative;overflow:hidden}
-.svc-hero::before{content:'';position:absolute;inset:0;opacity:.03;background-image:linear-gradient(rgba(255,255,255,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.5) 1px,transparent 1px);background-size:60px 60px}
+.svc-hero::before{content:'';position:absolute;inset:0;opacity:.03;background-image:linear-gradient(rgba(255,255,255,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.5) 1px,transparent 1px);background-size:60px 60px;pointer-events:none}
 .svc-hero .tag{color:var(--green-bright)}
 .svc-hero h1{font-size:clamp(2rem,4vw,3rem);max-width:700px;margin-bottom:16px}
 .svc-hero p{color:rgba(255,255,255,.5);font-size:17px;max-width:580px;line-height:1.8;margin-bottom:28px}
@@ -380,7 +380,7 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;line-height:1.1;letter-spacin
    PAGE HEADER (about, faq, contact)
    ============================================================ */
 .pg-header{padding:200px 0 80px;background:var(--surface);position:relative;overflow:hidden}
-.pg-header::before{content:'';position:absolute;top:-120px;right:-120px;width:350px;height:350px;border:1px solid var(--border);border-radius:50%}
+.pg-header::before{content:'';position:absolute;top:-120px;right:-120px;width:350px;height:350px;border:1px solid var(--border);border-radius:50%;pointer-events:none}
 .pg-header-inner{max-width:650px}
 .pg-header-inner h1{font-size:clamp(2rem,4vw,3rem);color:var(--navy);margin-bottom:14px}
 .pg-header-inner p{color:var(--text-sub);font-size:16px;line-height:1.8}
@@ -392,7 +392,7 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;line-height:1.1;letter-spacin
 
 /* Purpose */
 .purpose{background:var(--navy);border-radius:24px;padding:64px;margin:40px 0 80px;position:relative;overflow:hidden}
-.purpose::before{content:'';position:absolute;top:-60px;right:-60px;width:250px;height:250px;border:1px solid rgba(255,255,255,.04);border-radius:50%}
+.purpose::before{content:'';position:absolute;top:-60px;right:-60px;width:250px;height:250px;border:1px solid rgba(255,255,255,.04);border-radius:50%;pointer-events:none}
 .purpose .bar{width:48px;height:3px;background:var(--green);border-radius:2px;margin-bottom:24px}
 .purpose h2{color:#fff;margin-bottom:16px;font-size:clamp(1.6rem,3vw,2.2rem)}
 .purpose p{color:rgba(255,255,255,.5);font-size:16px;line-height:1.85;max-width:660px}
